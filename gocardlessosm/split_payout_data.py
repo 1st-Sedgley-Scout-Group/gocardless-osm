@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from accounting.accounting import ReadGoCardlessPayoutExport
+from accounting import ReadGoCardlessPayoutExport
 import pendulum
 
 def get_data():
@@ -9,10 +9,15 @@ def get_data():
 
 st.title("GoCardless Payouts")
 
-if 'payout' not in st.session_state:
-    st.session_state['file'] = st.file_uploader("Payout CSV from GoCardless", accept_multiple_files=False, on_change=get_data)
-else:
-    
+with st.form("form", clear_on_submit=True):
+    st.session_state['file'] = st.file_uploader("Payout CSV from GoCardless", accept_multiple_files=False)
+    st.session_state['submit'] = st.form_submit_button("submit")
+
+if st.session_state['submit'] is True:
+    get_data()
+
+if 'payout' in st.session_state:
+    st.divider()
     st.success(":partying_face: Success payout information available below")
     st.markdown(f"""
                 |||
@@ -24,7 +29,6 @@ else:
                 """)
     st.subheader("Subscriptions")
     st.write(st.session_state['payout'].subscriptions)
-    
+
     st.subheader("Activities")
     st.write(st.session_state['payout'].activities)
-    
