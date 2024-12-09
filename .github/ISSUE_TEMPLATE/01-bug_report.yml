@@ -1,0 +1,48 @@
+name: ​🐛 Bug Report
+description: Report that something isn't working as intended or is causing misleading/wrong interpretation
+title: 'fix: <Write a descriptive headline here>'
+labels: ['bug']
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected behavior
+      description: Describe the behavior you anticipated compared to what is currently occurring.
+      placeholder: When executing the code with all required parameters and clicking 'run', I expected the code to return a pd.DataFrame successfully. However, the code threw a RunTime Error on line 13.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes: 
+      label: Steps to reproduce the bug
+      description: Provide a detailed list of steps or actions that lead to the manifestation of the bug.
+      placeholder: |
+        1. Checkout XXXX branch
+        2. Navigate to XXX/filename.
+        3. Input the parameters (e.g., param1=XX, param2=XX) as specified.
+        4. Execute the script
+    validations:
+      required: true
+  - type: textarea
+    id: solutions
+    attributes:
+      label: Possible solutions
+      description: Share any ideas or suggestions you might have for resolving the bug. This could include potential fixes, workarounds, or considerations that could help in addressing the issue.
+      placeholder: |
+        Incorporating a try statement to handle potential runtime errors could help. 
+        try: 
+        XXXX code
+        except TypeError as e:
+    validations:
+      required: false
+  - type: input
+    id: url
+    attributes:
+      label: GitHub code link
+      description: Include a direct link to the specific code or repository on GitHub relevant to the reported issue.  
+      placeholder: "https://github.com/1st-Sedgley-Scout-Group/<repo>/tree/<branch>/<file_path>"
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: "Thank you for contributing to this project"

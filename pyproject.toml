@@ -1,0 +1,41 @@
+[project]
+name = "1stsedgley-template"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "==3.13"
+dependencies = [
+    "ipykernel>=6.29.5",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
+
+[tool.ruff]
+target-version = "py312"
+fix = true
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "W", "I", "N", "D", "UP", "ANN", "S", "C4", "DTZ", "SIM", "ARG", "ERA", "PD", "NPY", "FURB", "RUF200"]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint.flake8-import-conventions.aliases]
+"matplotlib.pyplot" = "plt"
+numpy = "np"
+pandas = "pd"
+seaborn = "sns"
+scipy = "sp"
+geopandas = "gpd"
+"sitcen.aws" = "sa"
+"sitcen.io" = "sio"
+"sitcen.charts" = "sc"
+"plotly.express" = "px"
+"plotly.graph_objects" = "go"
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

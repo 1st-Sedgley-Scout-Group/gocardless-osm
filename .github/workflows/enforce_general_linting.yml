@@ -1,0 +1,11 @@
+name: General Linting
+
+on:
+    - pull_request
+jobs:
+    merge_conflict_markers:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v4
+        - name: Merge Conflict finder
+          uses: olivernybroe/action-conflict-finder@v4.0

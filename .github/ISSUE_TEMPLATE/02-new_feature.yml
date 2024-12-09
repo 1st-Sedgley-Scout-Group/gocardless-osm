@@ -1,0 +1,42 @@
+name: 💡 New Feature
+description: A request for a new visualisation, function or capability in the codebase
+title: 'feat: <Write a descriptive headline here>'
+labels: ['new feature']
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What does the new feature do?
+      description: Provide a detailed description of the intended functionality and purpose of the new feature.
+      placeholder: |
+        - A chart to analyse the correlation between the consumption of various chocolate bars and the probability of receiving a knighthood.
+        - Develop a function to determine the maximum quantity of crisps that can be stored within a spaceship.
+    validations:
+      required: true
+  - type: textarea
+    id: commission-value
+    attributes: 
+      label: Commission and impact/value
+      description: Who commissioned the new feature? Discuss the significance of the new feature, considering factors such as its impact on users, potential benefits (for the customer and SitCen), or what value it adds to the customer or SitCen.
+      placeholder: Internally commissioned by SitCen. This will enable us to rapidly calculate the quantity of crisps that can be dispatched to Mars.
+    validations:
+      required: true
+  - type: textarea
+    id: solutions
+    attributes:
+      label: Proposed solutions
+      description: If you have specific ideas on how to implement the new feature, provide details on the proposed solution. Include any technical considerations, design principles, or implementation strategies.
+      placeholder: We can develop a dedicated algorithm that assesses the available storage space, considers packaging efficiency, and calculates the optimal amount of crisps that can be efficiently transported to Mars.   
+    validations:
+      required: false
+  - type: textarea
+    id: information
+    attributes:
+      label: Additional information
+      description: Include any relevant context, use cases, or references that can help contributors understand the new feature better. This section can also include any discussions, decisions, or insights related to the new feature.
+      placeholder: We discussed in the office if the flavour of the crisps would impact the quantity that a spaceship could hold.
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: "Thank you for contributing to this project"

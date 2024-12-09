@@ -1,0 +1,56 @@
+name: ​✨ Enhancement Request
+description: A request for improvements to a existing functionality or visualisation in the codebase
+title: 'feat: <Write a descriptive headline here>'
+labels: ['enhancement']
+body:
+  - type: textarea
+    id: current-behaviour
+    attributes:
+      label: Current behavior
+      description: Briefly describe the existing behavior or limitations that the enhancement aims to address.
+      placeholder: The existing code is limited to displaying basic vertical lines and lacks the functionality to dynamically reposition annotations along the line 
+    validations:
+      required: true
+  - type: textarea
+    id: enhanced-behaviour
+    attributes: 
+      label: Enhanced behavior
+      description: Clearly outline the desired improvements or changes resulting from the enhancement.
+      placeholder: The code should determine the optimal position for the annotation along the line and automatically place it at that location
+    validations:
+      required: true
+  - type: textarea
+    id: commission-value
+    attributes: 
+      label: Commission and impact/value
+      description: Who commissioned the enhancement? Discuss the significance of the enhancement, considering factors such as its impact on users, potential benefits, or added value to the project.
+      placeholder: Internally commissioned, this will prevent manual calculations that could be wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: solutions
+    attributes:
+      label: Proposed solution
+      description: If you have specific ideas on how to implement the enhancement, provide details on the proposed solution. Include any technical considerations, design principles, or implementation strategies.
+      placeholder: A potential solution is to analyze the positions of other data visualizations on the chart and identify the nearest data point or cap. Additionally, we would need to compute the appropriate size for the annotation box to ensure it seamlessly fits into the identified location.
+    validations:
+      required: false
+  - type: input
+    id: url
+    attributes:
+      label: GitHub code link
+      description: Include a direct link to the specific code or repository on GitHub relevant to the reported enhancement.  
+      placeholder: "https://github.com/1st-Sedgley-Scout-Group/<repo>/tree/<file_path>"
+    validations:
+      required: false
+  - type: textarea
+    id: information
+    attributes:
+      label: Additional information
+      description: Include any relevant context, use cases, or references that can help contributors understand the enhancement better. This section can also include any discussions, decisions, or insights related to the enhancement.
+      placeholder: This functionality is primarily needed for line charts, but expanding its utility to accommodate other types of charts could enhance its overall usefulness.
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: "Thank you for contributing to this project"

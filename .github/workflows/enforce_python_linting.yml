@@ -1,0 +1,25 @@
+name: Python Linting
+
+on:
+    - pull_request
+jobs:
+
+    ruff_format:
+        if: ${{ always() }} # Will always run even if dependent job fails
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v4
+        - uses: astral-sh/ruff-action@v1
+          with:
+            changed-files: "true" # This will only run on files that have changed
+            args: "format --check" # Use the ruff formatter rather then the default of ruff linter
+    
+    ruff_lint:
+        if: ${{ always() }} # Will always run even if dependent job fails
+        needs: ruff_format # Will only run once defined job is complete
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v4
+        - uses: astral-sh/ruff-action@v1
+          with:
+            changed-files: "true" # This will only run on files that have changed

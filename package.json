@@ -1,0 +1,64 @@
+{
+  "scripts": {
+    "build": "python setup.py sdist bdist_wheel"
+  },
+  "auto": {
+    "baseBranch": "main",
+    "noVersionPrefix": false,
+    "noDefaultLabels": true,
+    "author": {
+      "name": "github",
+      "email": "41898282+github-actions[bot]@users.noreply.github.com"
+    },
+    "plugins": [
+      "git-tag",
+      "conventional-commits",
+      "released"
+    ],
+    "labels": [
+      {
+        "name": "major",
+        "changelogTitle": "💥 Breaking Change",
+        "description": "Makes significant, backwards-incompatible changes to the codebase that break existing functionality.",
+        "releaseType": "major",
+        "color": "#D93F0B"
+      },
+      {
+        "name": "new feature",
+        "changelogTitle": "💡 New feature",
+        "description": "New visualisation or function to the Sitcen codebase",
+        "releaseType": "minor",
+        "color": "#FBCA04"
+      },
+      {
+        "name": "enhancement",
+        "changelogTitle": "🚀 Enhancement",
+        "description": "Improvements to an existing visualisation or Sitcen codebase",
+        "releaseType": "minor",
+        "color": "#a2eeef"
+      },
+      {
+        "name": "bug",
+        "changelogTitle": "🐛 Bug Fix",
+        "description": "Something isn't working as intended, or is causing misleading/ wrong interpretation",
+        "releaseType": "patch",
+        "color": "#d73a4a"
+      },
+      {
+        "name": "documentation",
+        "changelogTitle": "📝 Documentation",
+        "description": "Codebase related documentation only",
+        "releaseType": "patch",
+        "color": "#cfd3d7"
+      }
+    ]
+  },
+  "dependencies": {
+    "auto": "^11.0.4"
+  },
+  "devDependencies": {
+    "@auto-it/conventional-commits": "^11.0.4",
+    "@auto-it/git-tag": "^11.0.4",
+    "@auto-it/released": "^11.0.4"
+  }
+}
