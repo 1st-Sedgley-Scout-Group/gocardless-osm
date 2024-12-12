@@ -34,16 +34,20 @@ executing==2.1.0
     # via stack-data
 filelock==3.16.1
     # via virtualenv
+git-python==1.0.3
+    # via gocardlessosm (pyproject.toml)
 gitdb==4.0.11
     # via gitpython
 gitpython==3.1.43
-    # via streamlit
+    # via
+    #   git-python
+    #   streamlit
 identify==2.6.3
     # via pre-commit
 idna==3.10
     # via requests
 ipykernel==6.29.5
-    # via gocardless-osm (pyproject.toml)
+    # via gocardlessosm (pyproject.toml)
 ipython==8.30.0
     # via ipykernel
 jedi==0.19.2
@@ -90,7 +94,7 @@ packaging==24.2
     #   streamlit
 pandas==2.2.3
     # via
-    #   gocardless-osm (pyproject.toml)
+    #   gocardlessosm (pyproject.toml)
     #   streamlit
 parso==0.8.4
     # via jedi
@@ -103,7 +107,7 @@ platformdirs==4.3.6
     #   jupyter-core
     #   virtualenv
 pre-commit==4.0.1
-    # via gocardless-osm (pyproject.toml)
+    # via gocardlessosm (pyproject.toml)
 prompt-toolkit==3.0.48
     # via ipython
 protobuf==5.29.1
@@ -153,7 +157,7 @@ smmap==5.0.1
 stack-data==0.6.3
     # via ipython
 streamlit==1.41.0
-    # via gocardless-osm (pyproject.toml)
+    # via gocardlessosm (pyproject.toml)
 tenacity==9.0.0
     # via streamlit
 toml==0.10.2
