@@ -5,7 +5,15 @@ import streamlit as st
 
 from gocardlessosm.payout_processor import process_gocardless_export
 
-st.Page().title("GoCardless Payouts")
+st.page_config(
+    page_title="GoCardless Payouts",
+    menu_items={
+        "Get Help": "https://www.extremelycoolapp.com/help",
+        "Report a bug": "https://www.extremelycoolapp.com/bug",
+        "About": "# This is a header. This is an *extremely* cool app!",
+        "yay": "we are working!",
+    },
+)
 
 
 def get_data() -> None:
