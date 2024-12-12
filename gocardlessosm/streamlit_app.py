@@ -5,6 +5,8 @@ import streamlit as st
 
 from gocardlessosm.payout_processor import process_gocardless_export
 
+st.Page().title("GoCardless Payouts")
+
 
 def get_data() -> None:
     """Callback to get the data from the uploaded file."""
