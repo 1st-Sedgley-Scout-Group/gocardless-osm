@@ -5,7 +5,7 @@ from typing import Self
 
 import pandas as pd
 
-from gocardlessosm.data_types import DataColumns, Payout, ScheduleType, Sections
+from .data_types import DataColumns, Payout, ScheduleType, Sections
 
 
 class PayoutProcessor:
