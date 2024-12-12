@@ -8,7 +8,7 @@ from gocardlessosm.payout_processor import process_gocardless_export
 st.set_page_config(
     page_title="GoCardless Payouts",
     menu_items={
-        "About": "# This is a header. This is an *extremely* cool app!",
+        "About": "Created by 1st Sedgley Scout Group for internal use only.",
     },
 )
 
