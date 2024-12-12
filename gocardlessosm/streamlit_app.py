@@ -3,7 +3,7 @@
 import pandas as pd
 import streamlit as st
 
-from .payout_processor import process_gocardless_export
+from gocardlessosm.payout_processor import process_gocardless_export
 
 
 def get_data() -> None:
