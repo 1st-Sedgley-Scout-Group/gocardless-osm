@@ -5,7 +5,7 @@ import streamlit as st
 
 from gocardlessosm.payout_processor import process_gocardless_export
 
-st.page_config(
+st.set_page_config(
     page_title="GoCardless Payouts",
     menu_items={
         "Get Help": "https://www.extremelycoolapp.com/help",
