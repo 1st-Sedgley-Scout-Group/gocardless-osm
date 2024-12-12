@@ -247,7 +247,7 @@ wheels = [
 [[package]]
 name = "gocardlessosm"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "git-python" },
     { name = "ipykernel" },
