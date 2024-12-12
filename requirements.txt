@@ -94,8 +94,6 @@ pandas==2.2.3
     #   streamlit
 parso==0.8.4
     # via jedi
-pendulum==3.0.0
-    # via gocardless-osm (pyproject.toml)
 pexpect==4.9.0
     # via ipython
 pillow==11.0.0
@@ -128,8 +126,6 @@ python-dateutil==2.9.0.post0
     # via
     #   jupyter-client
     #   pandas
-    #   pendulum
-    #   time-machine
 pytz==2024.2
     # via pandas
 pyyaml==6.0.2
@@ -160,8 +156,6 @@ streamlit==1.41.0
     # via gocardless-osm (pyproject.toml)
 tenacity==9.0.0
     # via streamlit
-time-machine==2.16.0
-    # via pendulum
 toml==0.10.2
     # via streamlit
 tornado==6.4.2
@@ -182,9 +176,7 @@ typing-extensions==4.12.2
     #   altair
     #   streamlit
 tzdata==2024.2
-    # via
-    #   pandas
-    #   pendulum
+    # via pandas
 urllib3==2.2.3
     # via requests
 virtualenv==20.28.0

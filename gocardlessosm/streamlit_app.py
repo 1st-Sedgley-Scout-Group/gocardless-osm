@@ -1,7 +1,6 @@
 """The streamlit app to host the GoCardless Payout formatter."""
 
 import pandas as pd
-import pendulum
 import streamlit as st
 
 from gocardlessosm.payout_processor import process_gocardless_export
@@ -41,7 +40,7 @@ if "payout" in st.session_state:
     st.markdown(f"""
                 |||
                 |---|---|
-                |Date|{pendulum.parse(st.session_state['payout'].date).format("DD MMM YYYY")}|
+                |Date|{pd.Timestamp(st.session_state['payout'].date).strftime("%d %b %Y")}|
                 |Gross|£{round(st.session_state['payout'].gross_amount, 2):,.2f}|
                 |Net| £{round(st.session_state['payout'].net_amount, 2):,.2f}|
                 |Fees| £{round(st.session_state['payout'].fees, 2):,.2f}|
